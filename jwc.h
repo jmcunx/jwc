@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2003 ... 2020 2021 
+ * Copyright (c) 2003 ... 2021 2022
  *     John McCue <jmccue@jmcunx.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -19,7 +19,7 @@
 
 #define PROG_NAME   "jwc"
 
-#define JWC_H_REV "$Id: jwc.h,v 3.3 2020/06/18 02:04:33 jmccue Exp $"
+#define JWC_H_REV "INCLUDED"
 
 #define WC_HDR_1 "%8s "
 #define WC_DTL_2 "%8lu "
@@ -75,5 +75,3 @@ int  show_brief_help(work_area *);
 void close_out(struct s_file_info *);
 
 #endif   /*  JWC_H_REV  */
-
-/* END: jwc.h */

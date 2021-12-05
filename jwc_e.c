@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2003 ... 2020 2021
+ * Copyright (c) 2003 ... 2021 2022
  *     John McCue <jmccue@jmcunx.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -15,7 +15,9 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+#ifndef _MSDOS
 #include <sys/param.h>
+#endif
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -23,8 +25,6 @@
 #include <j_lib2m.h>
 
 #include "jwc.h"
-
-char *jwc_e_rev="$Id: jwc_e.c,v 3.3 2021/02/21 21:01:17 jmccue Exp $";
 
 /*
  * free_expanded() -- Free expanded memory
@@ -55,5 +55,3 @@ void eoj(work_area *w)
   close_out(&(w->err));
 
 } /* eoj() */
-
-/* END: jwc_e.c */

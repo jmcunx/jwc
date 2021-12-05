@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2003 ... 2020 2021
+ * Copyright (c) 2003 ... 2021 2022
  *     John McCue <jmccue@jmcunx.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -15,7 +15,9 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+#ifndef _MSDOS
 #include <sys/param.h>
+#endif
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -23,11 +25,6 @@
 #include <j_lib2m.h>
 
 #include "jwc.h"
-
-char *jwc_hp_rev="$Id: jwc_hp.c,v 3.5 2021/02/21 21:01:17 jmccue Exp $";
-extern char *jwc_rev;
-extern char *jwc_e_rev;
-extern char *jwc_i_rev;
 
 #define MSG_HELP_11 "print the number of bytes, words, and lines in files"
 
@@ -69,18 +66,9 @@ int show_rev(work_area *w)
 {
 
   fprintf(w->out.fp,"%s %s:\n", PROG_NAME, LIT_REV);
-  fprintf(w->out.fp,"\t%s\n", JWC_H_REV);
-  fprintf(w->out.fp,"\t%s\n", jwc_rev);
-  fprintf(w->out.fp,"\t%s\n", jwc_e_rev);
-  fprintf(w->out.fp,"\t%s\n", jwc_hp_rev);
-  fprintf(w->out.fp,"\t%s\n", jwc_i_rev);
 
-#ifdef J_LIB2M_H
-  fprintf(w->out.fp, "\t%s\n", J_LIB2M_H);
-#endif
 #ifdef J_LIB2_H
-  fprintf(w->out.fp, "\t%s\n", J_LIB2_H);
-  fprintf(w->out.fp, "\t     %s %s\n", LIT_INFO_02, j2_get_build());
+  fprintf(w->out.fp, "\t%s %s\n", LIT_INFO_02, j2_get_build());
 #endif
 
 #ifdef OSTYPE
@@ -95,5 +83,3 @@ int show_rev(work_area *w)
   return(EXIT_FAILURE);
 
 } /* show_rev() */
-
-/* END: jwc_hp.c */

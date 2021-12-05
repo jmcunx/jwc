@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2003 ... 2020 2021
+ * Copyright (c) 2003 ... 2021 2022
  *     John McCue <jmccue@jmcunx.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -15,7 +15,9 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+#ifndef _MSDOS
 #include <sys/param.h>
+#endif
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
@@ -33,8 +35,6 @@
 #include <j_lib2m.h>
 
 #include "jwc.h"
-
-char *jwc_rev="$Id: jwc.c,v 3.5 2021/02/21 21:01:17 jmccue Exp $";
 
 /*
  * show_counts()
@@ -431,5 +431,3 @@ int main(int argc, char **argv)
   exit(0);
 
 }  /* main() */
-
-/* END: jwc.c */

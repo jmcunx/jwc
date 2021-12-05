@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2003 ... 2020 2021
+ * Copyright (c) 2003 ... 2021 2022
  *     John McCue <jmccue@jmcunx.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -15,7 +15,9 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+#ifndef _MSDOS
 #include <sys/param.h>
+#endif
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -33,8 +35,6 @@
 #define WCI_AMODE_TAB    1
 #define WCI_MAX_ENV_ARG  100
 #define SCKARG           80
-
-char *jwc_i_rev="$Id: jwc_i.c,v 3.6 2021/02/21 21:01:17 jmccue Exp $";
 
 /*
  * open_out() -- save the file anem and check status
@@ -249,9 +249,9 @@ void init_work(work_area *w, char *pname)
 
 } /* init_work() */
 
-/*****************************************************************************
-* init() -- init
-*****************************************************************************/
+/*
+ * init() -- init
+ */
 void init(work_area *w, int argc, char **argv)
 {
   int defaults_overriden = (int) FALSE;
@@ -267,11 +267,11 @@ void init(work_area *w, int argc, char **argv)
       w->show_bytes   = (int) TRUE;
     }
 
-} /* END: init() */
+} /* init() */
 
-/******************************************************************************
-* init_line_count()
-******************************************************************************/
+/*
+ * init_line_count()
+ */
 void init_line_count(l)
 
 	struct s_line_count *l;
@@ -286,6 +286,4 @@ void init_line_count(l)
   l->max_line_size = (COUNT_NUM) 0;
   l->max_line_num  = (COUNT_NUM) 0;
 
-} /* END: init_line_cpunt() */
-
-/******************************* END: jwc_i.c *********************************/
+} /* init_line_count() */

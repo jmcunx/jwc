@@ -1,5 +1,5 @@
 .\" 
-.\" Copyright (c) 2003 2004 2005 ... 2016 2017 2018 
+.\" Copyright (c) 2003 2004 2005 ... 2021 2022
 .\"     John McCue <jmccue@jmcunx.com>
 .\" 
 .\" Permission to use, copy, modify, and distribute this software for any
@@ -14,7 +14,7 @@
 .\" ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 .\" OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 .\" 
-.TH jwc 1 "$Date: 2018/03/07 22:36:05 $" "JMC" "User Commands"
+.TH jwc 1 "2018/03/07" "JMC" "User Commands"
 .SH NAME
 jwc - display text file stats
 .SH SYNOPSIS
@@ -78,7 +78,7 @@ Optional, print line number of the longest line
 
 .SH DIAGNOSTICS
 By default, TABs are not expanded into spaces, but counted as
-one character. This differs from UNIX wc, but this behavior
+one character. This differs from UNIX wc(1), but this behaviour
 can be changed by using argument '-E'.
 .PP
 Processes one line at a time, assumes the file is a text file.
