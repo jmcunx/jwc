@@ -341,7 +341,7 @@ void count_file(work_area *w, char *file_name)
     }
 
   /* Process Data */
-  while ((cbytes = getline(&buf, &buf_size, fp)) > (ssize_t) -1)
+  while ((cbytes = j2_getline(&buf, &buf_size, fp)) > (ssize_t) -1)
     {
       count_lines(w, &count, buf);
       count_words(&count, buf);
